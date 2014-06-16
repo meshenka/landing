@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1>?</h1>
+
+  <ul class="slideshow">
+    {% for post in site.categories.slide limit:5 %}
+      <li>
+        <span class="title">{{ post.title }}</span>
+        <iframe width="420" height="315" src="{{ post.video}}" frameborder="0" allowfullscreen></iframe>
+        <p>
+          {{ post.content }}
+        </p>
+        
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="secondary-headline">
+    {% for post in site.categories.headline limit:1 %}
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+    {% endfor %}
+
+  </div>
+
+  <div class="row">
+    <div class="col-6-md" id="col-left">
+    <h3> Temoignages</h3>
+      {% for post in site.tags.testimony  limit:1 %}
+            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            <img src="{{ post.img.url }}" alt="{{ post.img.alt }}"/>
+            <p>{{ post.content }}</p>
+      {% endfor %}    
+    </div>
+    <div class="col-6-md" id="col-right">
+      <h3> Plus </h3>
+      {% for post in site.tags.more limit:1 %}
+            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            <img src="{{ post.img.url }}" alt="{{ post.img.alt }}"/>
+            <p>{{ post.content }}</p>
+      {% endfor %}    
+
+    </div>
+  </div>
+  
+</div>
+  {{ site| debug }}
+ 

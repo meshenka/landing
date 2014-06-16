@@ -1,0 +1,15 @@
+# Site settings
+title: La landing page parfaite
+email: sgogel@ecedi.fr
+description: "Demonstration d'une landing page parfaite sous jekyll."
+baseurl: ""
+url: "http://landing.loc"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - .bowerrc
+  - bower.json
+  - Gruntfile.js
