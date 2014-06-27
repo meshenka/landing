@@ -2,33 +2,28 @@
 layout: default
 ---
 
-<div class="home">
+<div class="row headline">
+  <div class="col-md-12">
+    <h2>A Nice looking headline</h2>
+  </div>
+</div> <!-- // .headline -->
 
-  <h1>?</h1>
-
-  <ul class="slideshow">
-    {% for post in site.categories.slide limit:5 %}
-      <li>
-        <span class="title">{{ post.title }}</span>
+<div class="row main-panel">
+  {% for post in site.categories.slide limit:1 %}
+  <div class="col-md-6">
         <iframe width="420" height="315" src="{{ post.video}}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="col-md-6">
+        <h3>{{ post.title }}</h3>
         <p>
           {{ post.content }}
         </p>
-        
-      </li>
-    {% endfor %}
-  </ul>
-
-  <div class="secondary-headline">
-    {% for post in site.categories.headline limit:1 %}
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-    {% endfor %}
-
   </div>
+  {% endfor %}
+</div> <!-- // .main-panel -->
 
-  <div class="row">
-    <div class="col-6-md" id="col-left">
+<div class="row second-panel">
+  <div class="col-md-6">
     <h3> Temoignages</h3>
       {% for post in site.tags.testimony  limit:1 %}
             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -36,8 +31,8 @@ layout: default
             <img src="{{ post.img.url }}" alt="{{ post.img.alt }}"/>
             <p>{{ post.content }}</p>
       {% endfor %}    
-    </div>
-    <div class="col-6-md" id="col-right">
+  </div>
+  <div class="col-md-6">
       <h3> Plus </h3>
       {% for post in site.tags.more limit:1 %}
             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -46,9 +41,6 @@ layout: default
             <p>{{ post.content }}</p>
       {% endfor %}    
 
-    </div>
   </div>
   
-</div>
-  {{ site| debug }}
- 
+</div> <!-- // .second-panel -->  
