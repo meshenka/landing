@@ -1,0 +1,30 @@
+{
+  "name": "landing.loc",
+  "version": "0.1",
+  "homepage": "https://github.com/meshenka/landing",
+  "authors": [
+    "syg <sgogel@ecedi.fr>"
+  ],
+  "description": "a landing page with jekyll",
+  "keywords": [
+    "jekyll",
+    "landing",
+    "page",
+    "demo",
+    "test"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flight": "~1.2.0",
+    "jquery": "~2.1.1",
+    "jquery-ui": "~1.11.0",
+    "bootstrap": "~3.2.0"
+  }
+}

@@ -13,3 +13,6 @@ exclude:
   - .bowerrc
   - bower.json
   - Gruntfile.js
+  - bower_components
+  - README.md 
+  - doc
